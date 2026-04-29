@@ -2,6 +2,9 @@
 @import "tw-animate-css";
 @import "shadcn/tailwind.css";
 @import "@fontsource-variable/geist";
+@import "@fontsource/manrope/400.css";
+@import "@fontsource/manrope/600.css";
+@import "@fontsource/manrope/700.css";
 
 @custom-variant dark (&:is(.dark *));
 
@@ -129,29 +132,20 @@
     }
 }
 
-.liquid-ether-container {
-  position: relative;
-  overflow: hidden;
-  width: 100%;
-  height: 100%;
-  touch-action: none;
-}
-
 body {
   margin: 0;
   background-color: rgb(9, 2, 20);
   color: white; /* optional so text is visible */
+  overflow: hidden;
 }
 
-body {
-  font-family: San Francisco, sans-serif;
-}
+
 
 html, body, #root {
   margin: 0;
   width: 100%;
   height: 100%;
-  background: #070014;
+  background: #171212;
 }
 
 .app {
@@ -161,18 +155,7 @@ html, body, #root {
   overflow: hidden;
 }
 
-.liquid-bg {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 0;
-}
 
-.liquid-bg canvas {
-  width: 100% !important;
-  height: 100% !important;
-}
 
 .main-header {
   position: absolute;
@@ -186,9 +169,15 @@ html, body, #root {
   font-size: 56px;
   text-align: center;
 }
+
 h1 {
-  font-size: 48px;
+  font-family: "Manrope", sans-serif;
+  font-size: 100px;
+  font-weight: 700;
   text-align: center;
-  font-weight: 600;
   margin-top: 100px;
+  color: rgb(255, 255, 255);
 }
+
+
+
