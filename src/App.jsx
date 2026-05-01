@@ -51,23 +51,22 @@ const App = () => {
         }}
       />
 
-      {/* Fixed corner SVG decorations */}
-      <motion.svg width="400" height="520" viewBox="0 0 200 260" fill="none"
-        style={{ position: 'fixed', top: 0, left: 0, pointerEvents: 'none', zIndex: 1 }}>
-        <motion.path
-          d="M 172,0 C 138,22 104,38 85,62 C 66,86 64,108 74,126 C 90,148 114,144 117,124 C 120,104 104,88 86,90 C 68,92 50,110 40,134 C 28,160 16,192 0,238"
-          stroke={C} strokeWidth="2" strokeLinecap="round" fill="none" {...draw(0.2, 1.8)} />
-      </motion.svg>
-
-      <motion.svg width="320" height="520" viewBox="0 0 160 260" fill="none"
-        style={{ position: 'fixed', top: 0, right: 0, pointerEvents: 'none', zIndex: 1 }}>
-        <motion.path
-          d="M 140,0 C 80,55 155,115 105,170 C 55,225 120,245 160,260"
-          stroke={C} strokeWidth="2" strokeLinecap="round" fill="none" {...draw(0.35, 1.5)} />
-      </motion.svg>
-
       {/* Section 1: Hero */}
-      <section style={{ height: '100vh', display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', position: 'relative' }}>
+      <section style={{ height: '100vh', display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', position: 'relative', overflow: 'hidden' }}>
+        {/* Corner SVG decorations — clipped inside hero only */}
+        <motion.svg width="400" height="520" viewBox="0 0 200 260" fill="none"
+          style={{ position: 'absolute', top: 0, left: 0, pointerEvents: 'none', zIndex: 0 }}>
+          <motion.path
+            d="M 172,0 C 138,22 104,38 85,62 C 66,86 64,108 74,126 C 90,148 114,144 117,124 C 120,104 104,88 86,90 C 68,92 50,110 40,134 C 28,160 16,192 0,238"
+            stroke={C} strokeWidth="2" strokeLinecap="round" fill="none" {...draw(0.2, 1.8)} />
+        </motion.svg>
+
+        <motion.svg width="320" height="520" viewBox="0 0 160 260" fill="none"
+          style={{ position: 'absolute', top: 0, right: 0, pointerEvents: 'none', zIndex: 0 }}>
+          <motion.path
+            d="M 140,0 C 80,55 155,115 105,170 C 55,225 120,245 160,260"
+            stroke={C} strokeWidth="2" strokeLinecap="round" fill="none" {...draw(0.35, 1.5)} />
+        </motion.svg>
         <BlurText
           text="TrialMatch AI"
           delay={200} animateBy="words" direction="top"
